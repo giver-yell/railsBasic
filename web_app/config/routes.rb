@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   get 'todolists/new'
 
   post 'todolists' => 'todolists#create'
+  get  'todolists' => 'todolists#index'
 end
