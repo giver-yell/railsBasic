@@ -1,4 +1,16 @@
 <h1>新規投稿</h1>
+
+<!--エラー-->
+<!--any?でエラー発生を判定-->
+<% if @list.errors.any? %>
+    <%= @list.errors.count %>件のエラーが発生しました
+    <ul>
+        <% @list.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+        <% end %>
+    </ul>
+<% end %>
+
 <!--localを指定しないと非同期通信になる-->
 <%= form_with model: @list, url:'/todolists', local:true do |f| %>
     <h4>タイトル</h4>
