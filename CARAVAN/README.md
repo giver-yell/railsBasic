@@ -1,4 +1,8 @@
 # README
+## Modelとカラムを同時に作成
+`$ rails g model モデル名 カラム名1:データ型1 カラム名2:データ型2 ...`
+
+
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
