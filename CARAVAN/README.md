@@ -1,9 +1,13 @@
 # README
-## Modelとカラムを同時に作成
+## Rails コマンド
+### Modelとカラムを同時に作成
 `$ rails g model モデル名 カラム名1:データ型1 カラム名2:データ型2 ...`
 
-## 必要なController, Viewをまとめて作成
+### 必要なController, Viewをまとめて作成
 `$ rails g controller blogs index show new edit`  
+
+### 定義したルーティングの確認
+`$ rails routes`  
 
 
 
