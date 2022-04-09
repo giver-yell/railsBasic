@@ -2,6 +2,9 @@
 ## Modelとカラムを同時に作成
 `$ rails g model モデル名 カラム名1:データ型1 カラム名2:データ型2 ...`
 
+## 必要なController, Viewをまとめて作成
+`$ rails g controller blogs index show new edit`  
+
 
 
 This README would normally document whatever steps are necessary to get the
