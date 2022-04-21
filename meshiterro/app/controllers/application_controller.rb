@@ -2,6 +2,10 @@ class ApplicationController < ActionController::Base
   # devise利用の機能（ユーザ登録、ログイン認証など）が使われる場合、先にconfigure_permitted_parametersが実行される
   before_action :configure_permitted_parameters, if: :devise_controller?
 
+  def after_sign_in_path_for(resource)
+    post_images_path
+  end
+
   protected
 
   # devise_parameter_sanitizer.permitでnameのデータ操作を許可するアクションメソッドが指定される
