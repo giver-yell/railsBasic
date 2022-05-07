@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   root to: 'homes#top'
 
   resources :post_images, only: [:new, :create, :index, :show, :destroy] do
+    # いいね機能は詳細ページが不要なのでresourceと単数系にしてidをrequestに含まない 
+    resource  :favorites,     only: [:create, :destroy]
     resources :post_comments, only: [:create, :destroy]
   end
 
