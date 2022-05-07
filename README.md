@@ -59,4 +59,17 @@ username:~/ImageMagick-7.0.11 $ sudo make install
 
 
 ### Route確認
-`$ rails routes`
+`$ rails routes`  
+
+## paging導入(kaminariを利用)
+### kaminariをインストール
+1.Gemfileにコマンド追加  
+`gem 'kaminari','~> 1.2.1'`  
+2.kaminariをインストール  
+`$ bundle install`  
+3.kaminariの設定ファイルを作成  
+`$ rails g kaminari:config`  
+4.kaminariがページャで利用するテンプレートを作成  
+`$ rails g kaminari:views default`  
+
+
